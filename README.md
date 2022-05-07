@@ -20,7 +20,9 @@ Simple Gang Weapon Crafting
 Dependencies: 
 
 qb-core
+
 qb-target
+
 qb-menu
 
 
