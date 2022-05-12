@@ -1,29 +1,29 @@
 Config = {
-    ["Inv-Link"] = "qb-inventory/html/images/",
+    ["Inv-Link"] = "qb-inventory/html/images/", --Set this to your inventory Directory
     ["Weapons"] = {
-        ["weapon_pistol"] = {
-            hash = "weapon_pistol",
-            label = "Standard Pistol",
+        ["weapon_pistol"] = { --Item Name
+            hash = "weapon_pistol", --Item Name
+            label = "Standard Pistol", --Item Label shown inside the menu
             materials = {
                 [1] = {
-                    item = "iron",
-                    amount = 50,
+                    item = "iron", --Item Name
+                    amount = 50, --Item Amount Needed
                 },
                 [2] = {
-                    item = "steel",
-                    amount = 50,
+                    item = "steel", --Item Name
+                    amount = 50, --Item Amount Needed
                 },
                 [3] = {
-                    item = "copper",
-                    amount = 50,
+                    item = "copper", --Item Name
+                    amount = 50, --Item Amount Needed
                 },
                 [4] = {
-                    item = "plastic",
-                    amount = 20,
+                    item = "plastic", --Item Name
+                    amount = 20, --Item Amount Needed
                 },
                 [5] = {
-                    item = "rubber",
-                    amount = 15,
+                    item = "rubber", --Item Name
+                    amount = 15, --Item Amount Needed
                 },
             }
         },
@@ -51,6 +51,10 @@ Config = {
                     item = "rubber",
                     amount = 25,
                 },
+                [6] = {
+                    item = "mining_goldbar",
+                    amount = 1,
+                },
             }
         },
         ["weapon_snspistol"] = {
@@ -76,6 +80,10 @@ Config = {
                 [5] = {
                     item = "rubber",
                     amount = 25,
+                },
+                [6] = {
+                    item = "mining_goldbar",
+                    amount = 1,
                 },
             }
         },
@@ -103,6 +111,10 @@ Config = {
                     item = "rubber",
                     amount = 50,
                 },
+                [6] = {
+                    item = "mining_goldbar",
+                    amount = 3,
+                },
             }
         },
         ["weapon_pistol50"] = {
@@ -129,6 +141,10 @@ Config = {
                     item = "rubber",
                     amount = 65,
                 },
+                [6] = {
+                    item = "mining_goldbar",
+                    amount = 5,
+                },
             }
         },
         ["weapon_appistol"] = {
@@ -154,6 +170,10 @@ Config = {
                 [5] = {
                     item = "rubber",
                     amount = 25,
+                },
+                [6] = {
+                    item = "mining_goldbar",
+                    amount = 10,
                 },
             }
         }
@@ -465,7 +485,7 @@ Config = {
                 },
             }
         },
-        ["weapontint_plat"] = {
+        ["weapontint_plat"] = {  
             hash = "weapontint_plat",
             label = "Black Weapon Tint",
             materials = {
@@ -484,17 +504,43 @@ Config = {
             }
         }
     },
-    ["Shops"] = {
-        ["gunplug"] = {
-            ["craft"] = {
+    ["GangLocation"] = {
+        ["craft"] = {
+		    ["gunplug"] = {   -- Gang Name
                 ["loc"] = vector3(-1824.47, 4526.57, 5.29),  --Polyzone for crafting
-                ["length"] = 0.5,
-                ["width"] = 0.5,
+				["length"] = 0.5,
+				["width"] = 0.5,
                 ["name"] = "gunplug",
-                ["heading"] = 5,
-                ["minZ"] = 1.69,
-                ["maxZ"] = 5.69,
-            },
+				["heading"] = 5,
+				["minZ"] = 1.69,
+				["maxZ"] = 5.69,
+			},  -- Add More Locations below this
+        }
+    },
+    ["JobLocation"] = {
+        ["craft"] = {
+		    ["ammunation"] = {   -- Job Name
+                ["loc"] = vector3(19.84, -1107.85, 29.8),  --Polyzone for crafting
+				["length"] = 1,
+				["width"] = 1,
+                ["name"] = "ammunation", -- Job Name
+				["heading"] = 340,
+				["minZ"] = 26.4,
+				["maxZ"] = 30.4,
+			},  -- Add More Locations below this
+        }
+    },
+    ["PublicLocation"] = {
+        ["craft"] = {
+		    ["free1"] = {   -- Location Name
+                ["loc"] = vector3(-60.13, -2517.54, 7.4),  --Polyzone for crafting
+				["length"] = 0.5,
+				["width"] = 0.5,
+                ["name"] = "free1", -- Location Name
+				["heading"] = 325,
+				["minZ"] = 4,
+				["maxZ"] = 8,
+			},  -- Add More Locations below this
         },
     }
 }
