@@ -284,19 +284,20 @@ end)
 -- Threads
 
 CreateThread(function()
-    for k,v in pairs(Config.Shops) do
-        exports['qb-target']:AddBoxZone(v.craft.name, v.craft.loc, v.craft.length, v.craft.width, {
-            name = v.craft.name,
-            heading = v.craft.heading,
+    for k,v in pairs(Config.GangLocation) do
+        for k, v in pairs(v) do
+         exports['qb-target']:AddBoxZone(v.name, v.loc, v.length, v.width, {
+            name = v.name,
+            heading = v.heading,
             debugPoly = false,
-            minZ = v.craft.minZ,
-            maxZ = v.craft.maxZ
-        }, {
+            minZ = v.minZ,
+            maxZ = v.maxZ
+    },{
             options = {
                 {
                     icon = 'fa-solid fa-gun',
                     label = 'Craft Weapons',
-                    gang = {["gunplug"] = 1},
+                    gang = k,
                     action = function()
                         OpenWeaponCraftingMenu()
                     end,
@@ -304,7 +305,7 @@ CreateThread(function()
                 {
                     icon = 'fa-solid fa-box',
                     label = 'Craft Ammo',
-                    gang = {["gunplug"] = 1},
+                    gang = k,
                     action = function()
                         OpenAmmoCraftingMenu()
                     end,
@@ -312,7 +313,7 @@ CreateThread(function()
                 {
                     icon = 'fa-solid fa-box',
                     label = 'Craft Attachments',
-                    gang = {["gunplug"] = 1},
+                    gang = k,
                     action = function()
                         OpenAttachmentCraftingMenu()
                     end,
@@ -320,13 +321,110 @@ CreateThread(function()
                 {
                     icon = 'fa-solid fa-spray-can',
                     label = 'Craft Weapon Tints',
-                    gang = {["gunplug"] = 1},
+                    gang = k,
                     action = function()
                         OpenTintCraftingMenu()
                     end,
                 },
             },
-            distance = 1.5
-        })
+                distance = 1.5
+            })
+        end
+    end
+end)
+
+CreateThread(function()
+    for k,v in pairs(Config.JobLocation) do
+        for k, v in pairs(v) do 
+            exports['qb-target']:AddBoxZone(v.name, v.loc, v.length, v.width, {
+                name = v.name,
+                heading = v.heading,
+                debugPoly = false,
+                minZ = v.minZ,
+                maxZ = v.maxZ
+        },{
+            options = {
+                {
+                    icon = 'fa-solid fa-gun',
+                    label = 'Craft Weapons',
+                    job = k,
+                    action = function()
+                        OpenWeaponCraftingMenu()
+                    end,
+                },
+                {
+                    icon = 'fa-solid fa-box',
+                    label = 'Craft Ammo',
+                    job = k,
+                    action = function()
+                        OpenAmmoCraftingMenu()
+                    end,
+                },
+                {
+                    icon = 'fa-solid fa-box',
+                    label = 'Craft Attachments',
+                    job = k,
+                    action = function()
+                        OpenAttachmentCraftingMenu()
+                    end,
+                },
+                {
+                    icon = 'fa-solid fa-spray-can',
+                    label = 'Craft Weapon Tints',
+                    job = k,
+                    action = function()
+                        OpenTintCraftingMenu()
+                    end,
+                },
+            },
+                distance = 1.5
+            })
+        end
+    end
+end)
+
+CreateThread(function()
+    for k,v in pairs(Config.PublicLocation) do
+        for k, v in pairs(v) do 
+            exports['qb-target']:AddBoxZone(v.name, v.loc, v.length, v.width, {
+                name = v.name,
+                heading = v.heading,
+                debugPoly = false,
+                minZ = v.minZ,
+                maxZ = v.maxZ
+        },{
+            options = {
+                {
+                    icon = 'fa-solid fa-gun',
+                    label = 'Craft Weapons',
+                    action = function()
+                        OpenWeaponCraftingMenu()
+                    end,
+                },
+                {
+                    icon = 'fa-solid fa-box',
+                    label = 'Craft Ammo',
+                    action = function()
+                        OpenAmmoCraftingMenu()
+                    end,
+                },
+                {
+                    icon = 'fa-solid fa-box',
+                    label = 'Craft Attachments',
+                    action = function()
+                        OpenAttachmentCraftingMenu()
+                    end,
+                },
+                {
+                    icon = 'fa-solid fa-spray-can',
+                    label = 'Craft Weapon Tints',
+                    action = function()
+                        OpenTintCraftingMenu()
+                    end,
+                },
+            },
+                distance = 1.5
+            })
+        end
     end
 end)
