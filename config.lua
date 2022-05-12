@@ -51,10 +51,6 @@ Config = {
                     item = "rubber",
                     amount = 25,
                 },
-                [6] = {
-                    item = "mining_goldbar",
-                    amount = 1,
-                },
             }
         },
         ["weapon_snspistol"] = {
@@ -80,10 +76,6 @@ Config = {
                 [5] = {
                     item = "rubber",
                     amount = 25,
-                },
-                [6] = {
-                    item = "mining_goldbar",
-                    amount = 1,
                 },
             }
         },
@@ -111,10 +103,6 @@ Config = {
                     item = "rubber",
                     amount = 50,
                 },
-                [6] = {
-                    item = "mining_goldbar",
-                    amount = 3,
-                },
             }
         },
         ["weapon_pistol50"] = {
@@ -141,10 +129,6 @@ Config = {
                     item = "rubber",
                     amount = 65,
                 },
-                [6] = {
-                    item = "mining_goldbar",
-                    amount = 5,
-                },
             }
         },
         ["weapon_appistol"] = {
@@ -170,10 +154,6 @@ Config = {
                 [5] = {
                     item = "rubber",
                     amount = 25,
-                },
-                [6] = {
-                    item = "mining_goldbar",
-                    amount = 10,
                 },
             }
         }
