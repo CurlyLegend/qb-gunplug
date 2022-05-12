@@ -52,7 +52,7 @@ Simple Gang/Job/Public Weapon Crafting
 
 [qb-core](https://github.com/qbcore-framework/qb-core)
 
-[qb-inventory] (https://github.com/qbcore-framework/qb-inventory)
+[qb-inventory](https://github.com/qbcore-framework/qb-inventory)
 
 [qb-menu](https://github.com/qbcore-framework/qb-menu)
 
